@@ -1,0 +1,332 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+       font-family: "Patrick Hand", cursive;
+       font-weight: 400;
+       font-style: normal;
+      
+}
+html {
+    scroll-behavior: smooth;
+    
+}
+
+body {
+    margin: 0 auto;
+    background-color:lightblue;
+}
+.box-robot{
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+justify-items: center;
+margin-top: 30px;
+margin-left: 520px;
+width: 300px;
+height: 400px;
+background-color: #669bbc;
+border-radius: 20px;
+overflow: hidden;
+}
+.box-robot img{
+width: 200px;
+height: 200px;
+justify-content: center;
+justify-items: center;
+z-index: 1;
+
+}
+.box-content{
+    z-index: 1;
+    display: inline-block;
+}
+#span-not{
+    color: white;
+    font-size: 13px;
+    font-family: monospace;
+    background-color: crimson;
+    width: 15px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+.box-content p{
+    text-align: center;
+    color: #fff;
+    font-size: 12.5px;
+    font-family:monospace;
+    letter-spacing: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    border-right: 1px solid;
+    animation: typing 5s steps(22),
+    cursor .6s step-end infinite alternate;
+    
+}
+@keyframes cursor{
+    50% {border-color: transparent}
+}
+@keyframes typing {
+from {width: 0;}
+}
+.box-content p span{
+    font-size: 20px;
+}
+.box-robot::before{
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 140%;
+    background-color: white;
+    box-shadow: 0 0 20px rgb(8, 8, 8);
+    animation: animate 4s linear infinite;
+}
+.box-robot::after{
+    content: "";
+    position: absolute;
+    inset: 10px;
+    background-color: rgb(4, 75, 97);
+    border-radius: 16px;
+}
+@keyframes animate{
+0%{
+transform: rotate(0deg);
+}
+100%{
+    
+transform: rotate(360deg);}
+}
+.chat-bar-collapsible {
+    position: fixed;
+    bottom: 50px;
+   left: 500px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.collapsible {
+    background-color:  #669bbc;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 350px;
+    text-align: center;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 10px 10px 0px 0px;
+    border: 3px solid beige;
+    
+    
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+    
+}
+
+.full-chat-block {
+    width: 350px;
+    background: white;
+    text-align: center;
+    overflow: auto;
+    scrollbar-width: none;
+    height: max-content;
+    transition: max-height 0.2s ease-out;
+}
+
+.outer-container {
+    min-height: 500px;
+    bottom: 0%;
+    position: relative;
+}
+
+.chat-container {
+    max-height: 500px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    scroll-behavior: smooth;
+    hyphens: auto;
+}
+
+.chat-container::-webkit-scrollbar {
+    display: none;
+}
+.box-bot{
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+#chat-img{
+    width: 30px;
+    height: 30px;
+    background-color: #669bbc;
+    border-radius: 30px;
+}
+.chat-bar-input-block {
+    display: flex;
+    float: left;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(235, 235, 235);
+   border-top: 1px solid lightgrey;
+    padding: 10px 0px 10px 10px;
+    margin-top: 30px;
+   
+}
+.chat-bar-input-block input{
+    font-size: 13px;
+    width: 95%;
+    margin-left: 10px;
+    font-family: sans-serif;
+}
+.chat-bar-icons {
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    width: 25%;
+    float: right;
+    font-size: 20px;
+}
+
+#chat-icon:hover {
+    opacity: .7;
+}
+
+
+#userInput {
+    width: 75%;
+}
+
+.input-box {
+    float: left;
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    color: #000;
+    background-color: white;
+    outline: none
+}
+
+.userText {
+    color: white;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: right;
+    clear: both;
+   
+}
+
+.userText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background:deepskyblue;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-right-radius: 2px;
+    max-width: 80%;
+    margin-right: 10px;
+    animation: floatup .5s forwards
+}
+
+.botText {
+    color: #000;
+    font-family: Helvetica;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: left;
+    
+}
+
+.botText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: #e0e0e0;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-left-radius: 2px;
+    max-width: 80%;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    animation: floatup .5s forwards
+}
+.flex-center {
+    display: flex;
+    align-items: center;
+    
+  }
+
+@keyframes floatup {
+    from {
+        transform: translateY(14px);
+        opacity: .0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@media screen and (max-width:600px) {
+    .full-chat-block {
+        width: 100%;
+        border-radius: 0px;
+    }
+    .chat-bar-collapsible {
+        position: fixed;
+        bottom: 0;
+        left: 0; 
+        width: 100%;
+    }
+    .collapsible {
+        width: 100%;
+        border: 0px;
+        border-top: 3px solid white;
+        border-radius: 0px;
+    }
+    .outer-container {
+        min-height: 560px;
+    }
+    .box-robot{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 30px;
+    margin-left: 520px;
+    width: 300px;
+    height: 400px;
+    background-color: #669bbc;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+@media (max-width: 600px) {
+   .box-robot{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.box-robot.box-content img{
+    width: 200px;
+    height: 200px;
+}
+}
