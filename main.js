@@ -188,7 +188,7 @@ if (init === 1){
     input == "scorpio" || input == "sagitarius" ){
     return `samaa dongg zodiak aku juga ${input} <br> <br> btw kamu main game ga? game apa?`
     }else{
-        return `ohhh ${input} ya <br> aku juga sebenernya ga percaya zodiak si <br> <br> btw kamu main game ga? game apa?`
+        return `ohhh gitu <br> aku juga sebenernya ga percaya zodiak si <br> <br> btw kamu main game ga? game apa?`
     }
 }else if(init === 9){
     localStorage.setItem("game", input);
