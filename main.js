@@ -125,7 +125,7 @@ function getBotResponse(input) {
     if(input == "aku suka koubot!"){
         return "makasi udah suka sama aku 😊"}
      else if (input == "hai" || input == "halo" || input == "hai koubot" || input == "hello" || input == "halo koubot" || input == "hallo" || 
-     input == "hi" ){
+     input == "hi" || input == "Hai" ){
         return ` haii jugaa 😁 <br> <br> boleh kenalan? namanya siapa?`
      }else if(input == "sama terus" || input == "sama mulu" || input == "kamu ikut ikutan" || input == "kok sama terus" || input == "perasaan sama terus" || input == "perasaan sama mulu" 
      || input == "kok sama mulu"){
@@ -142,7 +142,7 @@ if (init === 1){
     let namagender = localStorage.getItem("nama")
     if(input === "cewe" || input === "aku cewe" || input === "cewo" || input == "cewe lah"){
         return `ohh cewe, kalo aku cowo.. <br> <br> eh ${namagender} hari ini puasa ga?`
-    }else if(input === "cowo" || input === "aku cowo" || input == "cowo lah"){
+    }else if(input === "cowo" || input === "aku cowo" || input == "cowo lah" || input === "lanang"){
         return `ohh cowo, kalo aku cewe.. <br> <br> eh ${namagender} hari ini puasa ga?`
     }else{
         return `kamu bencong ya 🥲 <br> <br> eh ${namagender} puasa ga hari ini`
